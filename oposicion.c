@@ -3,7 +3,10 @@
 #include <stdlib.h>
 #define MAX_FRASE 100
 
-
+/*
+	mezclar_con_numeros toma dos cadenas.
+	En la 2da cadena guarda la primera cadena codificada.
+*/
 void mezclar_con_numeros (char frase[], char frase_codificada[]){
 	int i=0;
 	char nueva_letra;
@@ -63,7 +66,6 @@ int main()
 	frase_nueva = malloc(sizeof(char)*strlen(frase_ingresada));
 
 	strcpy(frase, frase_ingresada);
-	//printf("%s \n", frase);
 
 	//codificacion
 	mezclar_con_numeros(frase, frase_nueva);
@@ -78,19 +80,15 @@ int main()
 
 	while(letra_ingresada == 'S'){
 
-		//printf("BUCLE ");
 		printf("Ingrese una frase: ");
 		//scanf(" %[^\n] ", frase_ingresada);
 		fgets(frase_ingresada, MAX_FRASE, stdin);
-
-		//getchar();
 
 		//solicito en memoria lo justo y necesario
 		frase = malloc(sizeof(char)*strlen(frase_ingresada));
 		frase_nueva = malloc(sizeof(char)*strlen(frase_ingresada));
 
 		strcpy(frase, frase_ingresada);
-		//printf("%s \n", frase);
 
 		//codificacion
 		mezclar_con_numeros(frase, frase_nueva);
